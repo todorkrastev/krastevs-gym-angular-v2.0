@@ -11,6 +11,10 @@ export class ProductService {
 
   private baseUrl = 'http://localhost:8080/api/products';
 
+  // Change page size to 100 items.
+  // private baseUrl = 'http://localhost:8080/api/products?size=100';
+
+
   constructor(private httpClient: HttpClient) { }
 
   getProductList(): Observable<Product[]> {
