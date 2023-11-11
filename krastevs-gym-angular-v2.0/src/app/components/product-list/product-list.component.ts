@@ -52,7 +52,7 @@ export class ProductListComponent implements OnInit {
     console.log(`keyword=${theKeyword}, thePageNumber=${this.thePageNumber}`);
 
     this.productService.searchProductsPaginate(this.thePageNumber - 1, this.thePageSize, theKeyword)
-                       .subscribe(this.processResult());
+      .subscribe(this.processResult());
   }
 
   handleListProducts() {
@@ -73,8 +73,8 @@ export class ProductListComponent implements OnInit {
     console.log(`currentCategoryId=${this.currentCategoryId}, thePageNumber=${this.thePageNumber}`);
 
     this.productService
-                       .getProductListPaginate(this.thePageNumber - 1, this.thePageSize, this.currentCategoryId)
-                       .subscribe(this.processResult());
+      .getProductListPaginate(this.thePageNumber - 1, this.thePageSize, this.currentCategoryId)
+      .subscribe(this.processResult());
   }
 
   updatePageSize(pageSize: string) {
@@ -90,5 +90,10 @@ export class ProductListComponent implements OnInit {
       this.thePageSize = data.page.size;
       this.theTotalElements = data.page.totalElements;
     };
+  }
+
+  addToCart(theProduct: Product) {
+
+    console.log(`Adding to cart: ${theProduct.name}, ${theProduct.unitPrice}`);
   }
 }
