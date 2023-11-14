@@ -16,10 +16,12 @@ import { CartStatusComponent } from './components/cart-status/cart-status.compon
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de';
 import localeDeExtra from '@angular/common/locales/extra/de';
+import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 
 registerLocaleData(localeDe, 'de-DE', localeDeExtra);
 
 const routes: Routes = [
+  { path: 'cart-details', component: CartDetailsComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'search/:keyword', component: ProductListComponent },
   { path: 'category/:id', component: ProductListComponent },
@@ -36,7 +38,8 @@ const routes: Routes = [
     ProductCategoryMenuComponent,
     SearchComponent,
     ProductDetailsComponent,
-    CartStatusComponent
+    CartStatusComponent,
+    CartDetailsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
@@ -47,9 +50,9 @@ const routes: Routes = [
   ],
   providers: [
     {
-    provide: LOCALE_ID,
-    useValue: 'de-DE'
-  }
+      provide: LOCALE_ID,
+      useValue: 'de-DE'
+    }
     , ProductService],
   bootstrap: [AppComponent]
 })
