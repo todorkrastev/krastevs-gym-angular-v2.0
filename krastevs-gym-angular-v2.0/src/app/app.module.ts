@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,11 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CartStatusComponent } from './components/cart-status/cart-status.component';
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+import localeDeExtra from '@angular/common/locales/extra/de';
+
+registerLocaleData(localeDe, 'de-DE', localeDeExtra);
 
 const routes: Routes = [
   { path: 'products/:id', component: ProductDetailsComponent },
@@ -40,7 +45,12 @@ const routes: Routes = [
     HttpClientModule,
     NgbModule
   ],
-  providers: [ProductService],
+  providers: [
+    {
+    provide: LOCALE_ID,
+    useValue: 'de-DE'
+  }
+    , ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
