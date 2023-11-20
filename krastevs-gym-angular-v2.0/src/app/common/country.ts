@@ -1,9 +1,5 @@
 export class Country {
-    constructor(
-        public id: number,
-        public code: string,
-        public name: string,
-    ) {
-
-    }
+    public id: number = 0;
+    public code: string = '';
+    public name: string = '';
 }
