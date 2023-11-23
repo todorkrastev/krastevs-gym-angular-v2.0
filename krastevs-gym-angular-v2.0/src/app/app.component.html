@@ -1,49 +1,183 @@
-<div class="page-wrapper">
-
-  <!-- MENU SIDEBAR-->
-  <aside class="menu-sidebar d-none d-lg-block">
-    <div class="logo">
-      <a routerLink="/products">
-        <img src="../assets/images/products/logo.png" alt="Logo" class="img-responsive">
+<header class="header">
+    <div class="header__wrapper">
+      <a href="/">
+        <img src="../assets/logo.png" class="header__logo" alt="Logo" />
       </a>
+      <nav class="header__navigation">
+        <!-- <div id="guest">
+          <a href="/users/login" class="btn">Sign in</a>
+          <a href="/users/login" class="btn">Log in</a>
+        </div> -->
+
+        <!--<div id="user">
+          <a href="/users/login" class="btn">Classes</a>
+          <a href="/users/login" class="btn">Exercises</a>
+          <a href="/users/login" class="btn">Products</a>
+          <a href="/users/login" class="btn"><i class="fab fa-instagram"></i></a>
+        </div> -->
+
+        <div id="admin">
+          <a href="/users/login" class="btn">Activities</a>
+          <a href="/users/login" class="btn">Applicants</a>
+          <a href="/users/login" class="btn">Classes</a>
+          <a href="/users/login" class="btn">Exercises</a>
+          <a href="/users/login" class="btn">Products</a>
+          <a href="/users/login" class="basket btn"><i class="fas fa-shopping-basket"></i></a>
+        </div>
+
+        <!-- <div id="admin" class="navigation__container">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="/users/login" class="btn">Activites</a>
+            </li>
+            <li class="navigation__item">
+              <a href="/users/login" class="btn">Applicants</a>
+            </li>
+            <li class="navigation__item">
+              <a href="/users/login" class="btn">Classes</a>
+            </li>
+            <li class="navigation__item">
+              <a href="/users/login" class="btn">Exercises</a>
+            </li>
+            <li class="navigation__item">
+              <a href="/users/login" class="btn">Products</a>
+            </li>
+            <li class="navigation__item">
+              <a href="/users/login" class="basket btn"><i class="fas fa-shopping-basket"></i></a>
+            </li>
+          </ul>
+        </div>-->
+
+      </nav>
     </div>
 
-    <app-product-category-menu></app-product-category-menu>
+  </header>
 
-  </aside>
-  <!-- END MENU SIDEBAR-->
+  <main>
+    <section id="hero">
+      <img src="../assets/hero.jpg" class="img--bg" alt="Background poster" />
 
-  <!-- PAGE CONTAINER-->
-  <div class="page-container">
-    <!-- HEADER DESKTOP-->
-    <header class="header-desktop">
-      <div class="section-content section-content-p30">
-        <div class="container-fluid">
-          <div class="header-wrap">
+      <h1 class="hero__title">no excuses!</h1>
+      <h2 class="hero__subtitle">get fit now</h2>
 
-            <app-search></app-search>
+      <a href="" class="member__btn">
+        get started >
+      </a>
+    </section>
 
-            <app-cart-status></app-cart-status>
+    <div class="divider"></div>
 
-          </div>
-          <div class="account-wrap"></div>
+    <section id="weights" class="info section">
+      <div class="info__wrapper">
+        <h2 class="info__title">Free Weights</h2>
+        <p class="info__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil saepe deleniti ipsa dignissimos totam.
+        </p>
+
+        <div class="info__buttons">
+          <button class="info__button edit">Edit</button>
+          <button class="info__button delete">Delete</button>
         </div>
       </div>
-    </header>
-    <!-- END HEADER DESKTOP-->
 
-    <!-- MAIN CONTENT-->
-    <router-outlet></router-outlet>
+      <img class="info__poster" src="../assets/hero.jpg" alt="Section poster" />
+    </section>
 
-  </div>
-</div>
+    <div class="divider"></div>
 
-<!-- END PAGE CONTAINER-->
+    <section id="machines" class="info section">
+      <div class="info__wrapper">
+        <h2 class="info__title">Machines</h2>
+        <p class="info__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil saepe deleniti ipsa dignissimos totam.
+        </p>
 
-<footer>
-  <ul>
-    <li><a href="#">About Us</a></li>
-    <li><a href="#">Contact Us</a></li>
-    <li><a href="#">Help</a></li>
-  </ul>
-</footer>
+        <div class="info__buttons">
+          <button class="info__button edit">Edit</button>
+          <button class="info__button delete">Delete</button>
+        </div>
+      </div>
+
+      <img class="info__poster" src="../assets/hero.jpg" alt="Section poster" />
+    </section>
+
+    <div class="divider"></div>
+  </main>
+
+  <footer class="footer">
+    <!-- Info -->
+    <div class="navi">
+      <div class="navi-group">
+        <h3 class="navi-group__title">Krastev's Gym</h3>
+        <nav>
+          <ul>
+            <li>
+              <p>Gold's Gym is the most iconic gym in the world. Since 1989, no one has stood for fitness and
+                bodybuilding. Become part of our Legacy now!
+              </p>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- About -->
+      <div class="navi-group">
+        <h3 class="navi-group__title">About</h3>
+        <nav>
+          <ul>
+            <li><a href="" class="navi-group__subtitle">Terms of Use</a></li>
+            <li><a href="" class="navi-group__subtitle">Data Privacy</a></li>
+            <li><a href="" class="navi-group__subtitle">Legal Notice</a></li>
+            <li><a href="" class="navi-group__subtitle">Cancellation</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Help -->
+      <div class="navi-group">
+        <h3 class="navi-group__title">Help & Contact</h3>
+        <nav>
+          <ul>
+            <li><a href="" class="navi-group__subtitle">Self Service</a></li>
+            <li><a href="" class="navi-group__subtitle">Help Center</a></li>
+            <li><a href="" class="navi-group__subtitle">Terminate Membership</a></li>
+            <li><a href="" class="navi-group__subtitle">Gym Usage</a></li>
+            <li><a href="" class="navi-group__subtitle">Franchise</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Careers -->
+      <div class="navi-group">
+        <h3 class="navi-group__title">Careers</h3>
+        <nav>
+          <ul>
+            <li><a href="" class="navi-group__subtitle">Jobs at Krastev's Gym</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+    <!-- Media -->
+    <div class="info">
+      <ul class="socials">
+        <li class="socials__item">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li class="socials__item">
+          <a href=""><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="socials__item">
+          <a href=""><i class="fab fa-google-plus-g"></i></a>
+        </li>
+        <li class="socials__item">
+          <a href=""><i class="fab fa-youtube"></i></a>
+        </li>
+        <li class="socials__item">
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+      <p class="rights">Copyright © 2023 Krastev & Waller GmbH. All Rights Reserved.</p>
+    </div>
+  </footer>
