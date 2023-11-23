@@ -1,0 +1,235 @@
+#hero {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+    position: relative;
+    text-align: center;
+}
+
+#hero::after {
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 1) 100%);
+    background-color: rgba(0, 0, 0, 0);
+    bottom: 0;
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.img--bg {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.hero__title,
+.hero__subtitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.625rem;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.hero__title {
+    font-size: 2.375rem;
+}
+
+.hero__subtitle {
+    font-size: 1.25rem;
+}
+
+.member__btn {
+    background-color: var(--color-primary);
+    border: 2px solid transparent;
+    color: var(--color-dark-gray);
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+/* Basic information section layout */
+
+.info .info__title,
+.info .info__description {
+    text-align: center;
+}
+
+.info .info__title {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.info__buttons {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-around;
+    flex-direction: row;
+    padding: 0.25rem;
+    gap: 13px;
+}
+
+.info .info__poster {
+    width: 100%;
+}
+
+@media screen and (min-width: 375px) {
+    .hero__title {
+        font-size: 4.5rem;
+    }
+
+    .btn {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+
+    .edit,
+    .delete,
+    .add {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .hero__subtitle {
+        font-size: 2rem;
+    }
+
+    .member__btn {
+        font-size: 1.5rem;
+    }
+
+    .info {
+        justify-content: space-between;
+        padding: 3rem 0;
+        width: 95%;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+
+    .info:nth-of-type(2n + 1) {
+        flex-direction: row-reverse;
+    }
+
+    .info .info__wrapper,
+    .info .info__poster {
+        width: 50%;
+    }
+
+    .info .info__title,
+    .info .info__description {
+        text-align: left;
+    }
+
+    .info .info__title {
+        font-size: 1.75rem;
+    }
+
+    .add,
+    .edit,
+    .delete {
+        font-size: 12px;
+    }
+
+
+    .info .info__poster {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .info .navi {
+        width: 80%;
+        padding: 4rem 0;
+    }
+
+    .info .info__poster {
+        width: 45%;
+    }
+
+    .info .info__wrapper {
+        width: 50%;
+    }
+
+    .info .info__title {
+        font-size: 2rem;
+    }
+
+    .add,
+    .edit,
+    .delete {
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .btn {
+        /*
+        padding: 0.25rem 0.875rem;
+        background-color: var(--color-primary);
+        color: var(--color-dark-gray);
+        */
+        padding: 0.25rem 0.875rem;
+        border: 2px solid transparent;
+    }
+
+    .add:hover,
+    .edit:hover,
+    .delete:hover {
+        background-color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        color: var(--color-black);
+        cursor: pointer;
+        transition: color 250ms ease-in-out;
+    }
+
+    #hero .member__btn:hover {
+        background-color: transparent;
+        color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        cursor: pointer;
+        transition: color 250ms ease-in-out;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+
+    .add,
+    .edit,
+    .delete {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 2560px) {
+
+    .add,
+    .edit,
+    .delete {
+        font-size: 18px;
+    }
+}
